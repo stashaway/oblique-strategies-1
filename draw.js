@@ -2,4 +2,4 @@
 
 var oblique = require('./index');
 
-console.log('\n' + oblique.draw() + '\n');
+console.log('\n' + exports.draw() + '\n');

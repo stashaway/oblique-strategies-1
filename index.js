@@ -171,11 +171,19 @@ var strategies =
 ];
 
 
-
+var exports = {};
 exports.strategies = strategies;
 
-exports.draw = function draw()
-{
-	var random = Math.floor(Math.random() * (strategies.length + 1));
-    return strategies[random];
-};
+
+
+// console.log('\n' + draw() + '\n');
+
+document.addEventListener("DOMContentLoaded", function(event) {
+    var draw = function draw()
+    {
+        var random = Math.floor(Math.random() * (strategies.length + 1));
+        document.getElementById('card_text').innerHTML=strategies[random];
+        return strategies[random];
+    };
+    document.getElementById('draw').addEventListener('click',draw);
+});
